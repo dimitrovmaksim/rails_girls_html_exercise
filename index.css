@@ -1,0 +1,41 @@
+html, body {
+  max-width: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 65px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer {
+  padding: 20px 0 0 0;
+  align-self: center;
+  text-align: center;
+  font-size: 12px;
+  height: 100px;
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer:before {
+  content: '';
+  display: block;
+  width: 250px;
+  border-top: 1px solid #e5e5e5;
+  margin: auto;
+}

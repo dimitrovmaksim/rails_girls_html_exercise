@@ -1,0 +1,33 @@
+.navbar {
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  padding: 0 0 0 30px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background-color: #474747;
+  width: 100%;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.navbar li a {
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.navbar a:hover {
+  background-color: #666666;
+}
+
+.about {
+  margin-left: auto;
+  background-color: #00bbff;
+}
+
+.navbar .about a:hover {
+  background-color: #029dd6;
+}
