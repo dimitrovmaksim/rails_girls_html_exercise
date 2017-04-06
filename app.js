@@ -12,7 +12,8 @@
       dataType: "json"
    }).then(function(response) {
        self.articles = response.data.articles;
-    });
-
+    }).catch(function(response) {
+     Console.log("Can't fetch file.Status: "    + response.status)
+      });
   }]);
 })();
