@@ -13,6 +13,8 @@
    }).then(function(response) {
        self.articles = response.data.articles;
 
-    });
+    }).catch(function(error) {
+      concile.log(error) 
+      });
   }]);
 })();
