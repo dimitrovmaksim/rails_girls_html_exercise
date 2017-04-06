@@ -1,7 +1,9 @@
 (function(){
 
   let app = angular.module('blogApp', []);
-
+  app.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+  }]);
   app.controller('BlogController', [ '$http', function($http){
     let self = this;
     self.articles = [];
@@ -12,8 +14,7 @@
       dataType: "json"
    }).then(function(response) {
        self.articles = response.data.articles;
-    }).catch(function(response) {
-     Console.log("Can't fetch file.Status: "    + response.status)
-      });
+
+    });
   }]);
 })();
