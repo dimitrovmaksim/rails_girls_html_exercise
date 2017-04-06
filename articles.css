@@ -1,41 +1,39 @@
 .articles-wrapper {
-  display: flex;
-  max-width: 60%;
-  flex-wrap: wrap;
-  padding: 20px 20px 20px 40px;
-  flex: 1 1 auto;
+  flex-basis: 250px;
+  flex-grow: 3;
+  margin: 20px 40px 20px 40px;
 }
 
-.article-body p{
-
+.article {
+  margin-bottom: 60px;
 }
+
 
 h2 a {
-  margin-left: 15px;
+  margin-left: 40px;
 }
 
 img {
-  max-width: 90%;
+  max-width: 95%;
+  margin-left: 15px;
 }
 
 .author a {
-  margin-left: 60px;
+  margin-left: 80px;
   font-size: 14px;
 }
 
+.author:after,
 h2:after {
   content: '';
   display: block;
   width: 250px;
   border-top: 1px solid #e5e5e5;
-  margin: 5px 0 0 45px;
+  margin: 5px 0 0 20px;
 }
 
 .author:after {
-   content: '';
-  display: block;
   width: 150px;
-  border-top: 1px solid #e5e5e5;
-  margin: 5px 0 0 55px;
+  margin-left: 45px;
 }
 

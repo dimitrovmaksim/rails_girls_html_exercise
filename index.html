@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="zxx" ng-app="blogApp">
   <head>
     <meta charset="UTF-8">
     <title>Test Blog</title>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="wrap_sidebar.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="articles.css">
     <link rel="stylesheet" href="sidebar.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="wrap_sidebar.js"></script>
   </head>
-  <body>
+  <body ng-controller="BlogController as blog">
     <div class="page-wrapper">
       <nav>
         <ul class="navbar">
@@ -22,31 +24,29 @@
       </nav>
       <div class="container">
         <div class="articles-wrapper">
-         <div class="article">
+         <div class="article" ng-repeat="article in blog.articles">
             <h2>
-              <a href="#">Lorem Ipsum Title</a>
+              <a href="#">{{article.title}}</a>
             </h2>
 
             <p class="author">
-              <a href="https://en.wikipedia.org/wiki/Cicero" target="blank">by Marcus Tullius Cicero</a>
+              <a href="https://en.wikipedia.org/wiki/Cicero" target="blank">by {{article.author}}</a>
             </p>
 
             <p class="image">
-              <img class="image" src="resources/lorem-ipsum.jpg" alt="Image Missing">
+              <img class="image" src={{article.img}} alt="Image Missing">
             </p>
 
             <div class="article-body">
-              <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-              <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat…</p>
+              {{article.body}}
             </div>
           </div>
         </div>
 
         <div class="sidebar-wrapper">
-          <div id="fixed">
+          <div class="fixed-sidebar">
             <div class="search">
-              <input type="text" name="search" placeholder="Search..">
+              <input type="search" name="search" placeholder="Search..">
             </div>
             <div class="archive">
               <h4>Archive:</h4>
@@ -66,9 +66,9 @@
             <div class="tags">
               <h4>Tags:</h4>
               <div class="tag-list">
-                <a href="#">barbaric</a>,
+                <a href="#">emperor</a>,
                 <a href="#">latin</a>,
-                <a href="#">caesar</a>,
+                <a href="#">cicero</a>,
                 <a href="#">rome</a>
               </div>
             </div>
@@ -77,7 +77,7 @@
       </div>
       <footer>
         <p>Created by Someone</p>
-        <p>Email: <a href="#">someone@example.com</a> | Phone: +000111222333</p>
+        <p>Email: <a href="#noop">someone@example.com</a> | Phone: +000111222333</p>
       </footer>
     </div>
   </body>
