@@ -8,7 +8,7 @@
 
     $http({
       method: 'GET',
-      url: '/articles.json',
+      url: 'articles.json',
       dataType: "json"
    }).then(function(response) {
        self.articles = response.data.articles;
