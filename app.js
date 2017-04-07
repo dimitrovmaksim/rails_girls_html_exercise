@@ -8,13 +8,9 @@
 
     $http({
       method: 'GET',
-      url: 'articles.json',
-      dataType: "json"
+      url: 'articles.json'
    }).then(function(response) {
        self.articles = response.data.articles;
-
-    }).catch(function(error) {
-      concile.log(error) 
       });
   }]);
 })();
