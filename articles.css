@@ -38,3 +38,81 @@ h2:after {
   margin-left: 45px;
 }
 
+/*TABS*/
+
+section {
+  max-width: 100%;
+  margin-top: 10px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+label {
+  background: #eee;
+  border: 1px solid #ddd;
+  padding: .7em 1em;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: -1px;
+}
+
+label:first-of-type {
+  margin-left: 0;
+}
+
+section {
+  width: 80%;
+}
+
+section > div {
+  width: 100%;
+  margin-top: -1px;
+  padding: 1em;
+  border: 1px solid #ddd;
+  -webkit-order: 1;
+  order: 1;
+}
+
+section > label {
+  border-radius: 10px 10px 0 0;
+}
+
+input[type=checkbox], section > div {
+  display: none;
+}
+
+input[type=checkbox]:checked + label {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+input[type=checkbox]:checked + label + div {
+  display: block;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  background-color: #00bbff;
+  font-size: 15px;
+  border-style: inherit;
+  border-width: 2px;
+  border-color: #02a8e5;
+}
+
+.comments-wrapper {
+  height: 200px;
+  overflow: auto;
+}
+
+.write-comment {
+  height: 30px;
+  width: 80%;
+
+}

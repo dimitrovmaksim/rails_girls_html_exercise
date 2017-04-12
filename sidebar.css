@@ -57,20 +57,20 @@ input[type="search"]:focus {
 }
 
 .archive,
-.tags {
+.trending {
   background-color: #f2f2f2;
   border: 1px solid #d6d6d6;
   border-radius: 5px;
 }
 
 .archive,
-.tags,
+.trending,
 .search {
   margin-top: 20px;
   width: 90%;
 }
 
-.tag-list {
+.trending-list {
   margin: 0 0 10px 10px;
 }
 

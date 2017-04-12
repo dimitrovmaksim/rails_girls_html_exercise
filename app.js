@@ -9,7 +9,7 @@
     $http({
       method: 'GET',
       url: 'articles.json'
-   }).then(function(response) {
+    }).then(function(response) {
        self.articles = response.data.articles;
       });
   }]);
