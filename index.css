@@ -45,8 +45,7 @@ a {
   display: flex;
   flex-direction: column;
   height: 25px;
-  flex-basis: 220px;
-  flex-grow: 3;
+  width: 100%;
   order: 1;
   cursor: pointer;
   justify-content: space-around;
