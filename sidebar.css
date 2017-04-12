@@ -1,14 +1,15 @@
 .sidebar-wrapper {
-  margin-bottom: auto;
   flex-basis: 220px;
   flex-grow: 1;
-  margin: 0 25px 0 20px;
 }
 
 @media (min-width: 1000px) {
   .fixed-sidebar {
     position: fixed;
     width: 30%;
+  }
+  .button {
+    display: none;
   }
 }
 
@@ -18,8 +19,13 @@
   }
 
   .fixed-sidebar {
-    position: static;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
 
+  .toggle-sidebar {
+    display: none;
   }
 }
 
@@ -59,7 +65,7 @@ input[type="search"]:focus {
 .tags,
 .search {
   margin-top: 20px;
-  width: 100%;
+  width: 90%;
 }
 
 .tag-list {

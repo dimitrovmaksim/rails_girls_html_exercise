@@ -10,6 +10,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="sidebar.js"></script>
   </head>
   <body ng-controller="BlogController as blog">
     <div class="page-wrapper">
@@ -22,6 +23,11 @@
         </ul>
       </nav>
       <div class="container">
+        <div class="button">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <div class="articles-wrapper">
          <div class="article" ng-repeat="article in blog.articles">
             <h2>
@@ -42,7 +48,7 @@
           </div>
         </div>
 
-        <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper toggle-sidebar">
           <div class="fixed-sidebar">
             <div class="search">
               <input type="search" name="search" placeholder="Search..">

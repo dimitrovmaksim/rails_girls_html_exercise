@@ -30,7 +30,7 @@ footer {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   flex: 1;
   justify-content: center;
 }
@@ -40,3 +40,19 @@ a {
   color: black;
 }
 
+.button {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 25px;
+  flex-basis: 220px;
+  flex-grow: 3;
+  order: 1;
+  cursor: pointer;
+  justify-content: space-around;
+}
+.button > * {
+  background-color: #00bbff;
+  height: 5px;
+  width: 30px;
+}

@@ -14,7 +14,8 @@ h2 a {
 }
 
 img {
-  max-width: 95%;
+  width: 90%;
+  max-width: 650px;
   margin-left: 15px;
 }
 
