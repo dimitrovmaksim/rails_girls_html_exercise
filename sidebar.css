@@ -4,6 +4,7 @@
 }
 
 @media (min-width: 1000px) {
+
   .fixed-sidebar {
     position: fixed;
     width: 30%;
@@ -14,6 +15,7 @@
 }
 
 @media (max-width: 999px) {
+
   .articles-wrapper {
     flex-basis: 100%;
   }
