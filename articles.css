@@ -68,14 +68,14 @@ section {
   max-width: 550px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .comments-wrapper{
     flex-direction: column;
   }
 }
 
 section > div {
-  width: 100%;
+  min-width: 100%;
   margin-top: -1px;
   padding: 1em;
   border: 1px solid #ddd;
@@ -115,18 +115,23 @@ input[type=submit] {
   border-color: #02a8e5;
 }
 
+.comments-form {
+ min-width: 60%;
+}
+
 .comments-list {
-  scroll-behavior: initial;
-  overflow: scroll;
-  height: 200px;
+  overflow-y: scroll;
+  height: 150px;
+  min-width: 40%;
 }
 
 .comment-body {
   height: 50px;
-  width: 90%;
+  min-width: 90%;
+
 }
 
 .comment-user {
   height: 30px;
-  width: 50%;
+  min-width: 30%;
 }

@@ -52,7 +52,7 @@
               <input id="{{article.id}}" type="checkbox">
               <label for="{{article.id}}">Comments:</label>
               <div class="comments-wrapper">
-                <form name="commentsForm" ng-controller="CommentsController as commentsCtrl" ng-submit="commentsForm.$valid && commentsCtrl.addComment(article)" novalidate>
+                <form class="comments-form" name="commentsForm" ng-controller="CommentsController as commentsCtrl" ng-submit="commentsForm.$valid && commentsCtrl.addComment(article)" novalidate>
                   <textarea ng-model="commentsCtrl.comment.body" class="comment-body" placeholder="Write a comment" required></textarea><br>
                   <input ng-model="commentsCtrl.comment.username" type="text" class="comment-user" placeholder="Username" required>
                   <input type="submit" value="Submit">
