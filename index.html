@@ -16,18 +16,21 @@
     <div class="page-wrapper">
       <nav>
         <ul class="navbar">
+          <li class="button">
+            <div></div>
+            <div></div>
+            <div></div>
+          </li>
           <li><a href="#">Home</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Contact</a></li>
           <li class="about"><a href="#">About</a></li>
         </ul>
+        <div class="toggle">
+         <div class="sidebar" ng-include="'_sidebar.html'"></div>
+        </div>
       </nav>
       <div class="container">
-        <div class="button">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
         <div class="articles-wrapper">
          <div class="article" ng-repeat="article in blog.articles">
             <h2>
@@ -58,35 +61,9 @@
           </div>
         </div>
 
-        <div class="sidebar-wrapper toggle-sidebar">
-          <div class="fixed-sidebar">
-            <div class="search">
-              <input type="search" name="search" placeholder="Search..">
-            </div>
-            <div class="archive">
-              <h4>Archive:</h4>
-              <div class="archive-list">
-                <ul>
-                  <li><a href="#">2017</a></li>
-                    <ul>
-                      <li><a href="#">March</a></li>
-                      <li><a href="#">February</a></li>
-                      <li><a href="#">January</a></li>
-                    </ul>
-                  <li><a href="#">2016</a></li>
-                </ul>
-              </div>
-            </div>
+        <div class="sidebar-wrapper">
+          <div class="fixed-sidebar" ng-include="'_sidebar.html'">
 
-            <div class="trending">
-              <h4>Trending:</h4>
-              <div class="trending-list">
-                <a href="#">emperor</a>,
-                <a href="#">latin</a>,
-                <a href="#">cicero</a>,
-                <a href="#">rome</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
