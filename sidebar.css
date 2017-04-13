@@ -3,7 +3,7 @@
   flex-grow: 1;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 
   .fixed-sidebar {
     position: fixed;
@@ -14,7 +14,7 @@
   }
 }
 
-@media (max-width: 799px) {
+@media (max-width: 999px) {
 
   .articles-wrapper {
     flex-basis: 100%;
