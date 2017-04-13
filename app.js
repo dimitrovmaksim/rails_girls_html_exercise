@@ -10,7 +10,17 @@
       method: 'GET',
       url: 'articles.json'
     }).then(function(response) {
-       self.articles = response.data.articles;
+      self.articles = response.data.articles;
       });
   }]);
+
+  app.controller("CommentsController", function(){
+    this.comment = {};
+
+    this.addComment = function(article) {
+      article.comments.push(this.comment);
+      this.comment = {};
+    }
+  });
+
 })();

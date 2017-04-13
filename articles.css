@@ -63,7 +63,15 @@ label:first-of-type {
 }
 
 section {
-  width: 80%;
+  display: flex;
+  flex-basis: 300px;
+  max-width: 550px;
+}
+
+@media (max-width: 450px) {
+  .comments-wrapper{
+    flex-direction: column;
+  }
 }
 
 section > div {
@@ -76,7 +84,7 @@ section > div {
 }
 
 section > label {
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 
 input[type=checkbox], section > div {
@@ -84,12 +92,13 @@ input[type=checkbox], section > div {
 }
 
 input[type=checkbox]:checked + label {
+  border-radius: 10px 10px 0 0;
   background: #fff;
   border-bottom: 1px solid #fff;
 }
 
 input[type=checkbox]:checked + label + div {
-  display: block;
+  display: flex;
 }
 
 input[type=submit] {
@@ -106,13 +115,18 @@ input[type=submit] {
   border-color: #02a8e5;
 }
 
-.comments-wrapper {
+.comments-list {
+  scroll-behavior: initial;
+  overflow: scroll;
   height: 200px;
-  overflow: auto;
 }
 
-.write-comment {
-  height: 30px;
-  width: 80%;
+.comment-body {
+  height: 50px;
+  width: 90%;
+}
 
+.comment-user {
+  height: 30px;
+  width: 50%;
 }
